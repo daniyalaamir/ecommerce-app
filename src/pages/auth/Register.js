@@ -7,7 +7,6 @@ const Register = () => {
   const [email, setEmail] = useState('');
 
   const handleSubmit = async (e) => {
-    console.log("called handleSubmit")
     e.preventDefault();
     const config = {
       url: process.env.REACT_APP_REGISTER_REDIRECT_URL,
@@ -30,6 +29,7 @@ const Register = () => {
           <h4>Register</h4>  
           <form onSubmit={handleSubmit}>
             <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} autoFocus />
+            <br/>
             <button type="submit" className="btn btn-raised">Register</button>
           </form>
         </div>
